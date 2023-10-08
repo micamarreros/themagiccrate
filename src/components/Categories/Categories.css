@@ -1,0 +1,28 @@
+.categories-container {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px 10px 40px;
+}
+
+.category-title {
+    font-family: 'Gloock', serif;
+    font-size: 24pt;
+    color: #655D8A;
+    padding: 10px 40px 10px 40px;
+}
+
+.category-subtitle {
+    font-family: 'Gloock', serif;
+    font-size: 28pt;
+}
+
+.categories-container button {
+    background-color: #655D8A;
+    color: #fff;
+    font-size: 14pt;
+    margin: 20px;
+    padding: 20px;
+    border-style: none;
+    border-radius: 5px; 
+    cursor: pointer;
+}

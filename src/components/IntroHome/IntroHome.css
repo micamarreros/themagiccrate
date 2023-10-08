@@ -1,0 +1,28 @@
+.home-banner {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin: auto;    
+    padding: 20px 40px 10px 40px;
+}
+
+.home-title {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin: auto;   
+    padding: 10px 40px 10px 40px;
+    color: #655D8A;
+    font-size: 28pt;
+    font-family: 'Gloock', serif;
+}
+
+.introduction {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin: auto;   
+    padding: 10px 40px 20px 40px;
+    color: #655D8A;
+    font-style: sans-serif;
+}

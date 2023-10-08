@@ -5,18 +5,12 @@ header {
     padding: 0 40px 0 40px;
 }
 
-img {
-    width: 100px;
-    padding: 10px;
-}
-
-h1 {
-    font-size: 16pt;
-    font-weight: 600;
+.logo {
+    width: 150px;
     padding: 20px;
 }
 
-li {
+.navbar-item {
     display: inline-block;
     margin: 10px;
     font-weight: 400;

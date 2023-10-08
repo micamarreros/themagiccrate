@@ -6,15 +6,14 @@ const NavBar = () => {
   return (
     <>
     <header>
-      <h1>The Magic Crate</h1>
+    <img className='logo' src='/logo.svg' alt="The Magic Crate"/>
       
       <nav>
         <ul>
-          <li><img src='/logo.svg'></img></li>
-          <li>Home</li>
-          <li>Subscriptions</li>
-          <li>Shop</li>
-          <li>About</li>
+          <li className='navbar-item'>Home</li>
+          <li className='navbar-item'>Subscriptions</li>
+          <li className='navbar-item'>Shop</li>
+          <li className='navbar-item'>About</li>
         </ul>
       </nav>
 
