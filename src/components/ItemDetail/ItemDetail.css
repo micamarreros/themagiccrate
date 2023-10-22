@@ -1,0 +1,14 @@
+.itemContainer {
+    text-align: center;    
+    border-radius: 10px;
+    border: 2px solid #655D8A;
+    width: 40vw;
+    padding: 2rem;
+    margin: auto;
+    background-color: #f7f7f7;
+}
+
+.product-id {
+    font-size: 14pt;
+    color: #7a7a7a;
+}

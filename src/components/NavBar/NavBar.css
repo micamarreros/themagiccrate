@@ -3,6 +3,8 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 40px 0 40px;
+    border-bottom: 3px solid #655D8A;
+    background-color: #f7f7f7;
 }
 
 .logo {
@@ -12,8 +14,9 @@ header {
 
 .navbar-item {
     display: inline-block;
-    margin: 10px;
+    margin: auto;
     font-weight: 400;
     color: #655D8A;
     cursor: pointer;
+    padding: 20px;
 }
