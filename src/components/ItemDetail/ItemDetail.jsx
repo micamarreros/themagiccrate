@@ -1,8 +1,9 @@
 import React from 'react';
 import './ItemDetail.css';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
+import CartContext from '../../context/CartContext';
 
 const ItemDetail = ({ id, img, name, stock, author, price }) => {
 
@@ -10,10 +11,14 @@ const ItemDetail = ({ id, img, name, stock, author, price }) => {
 
   const [addQuantity, setAddQuantity] = useState(0);
 
+  const {addToCart} = useContext(CartProvider);
+
   //Funcion manejadora de la cantidad
   const handleQuantity = (quantity) => {
     setAddQuantity(quantity);
-    console.log("Added products: " + quantity);
+    // console.log("Added products: " + quantity);
+    const item = {id, name, price};
+    addToCart(item, quantity);
   }
 
   return (

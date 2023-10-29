@@ -15,6 +15,7 @@ header {
 .navbar-item {
     display: inline-block;
     margin: auto;
+    text-decoration: none;
     font-weight: 400;
     color: #655D8A;
     cursor: pointer;
