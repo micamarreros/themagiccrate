@@ -8,7 +8,7 @@ export const CartContext = createContext({
     totalQuantity: 0
 });
 
-const CartProvider = ({children}) => {
+export const CartProvider = ({children}) => {
     //Estados para carrito, total y cantidad total
     const [cart, setCart] = useState([]);
     const [total, setTotal] = useState(0);
@@ -62,5 +62,3 @@ const CartProvider = ({children}) => {
     </CartContext.Provider>
   )
 }
-
-export default CartProvider

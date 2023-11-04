@@ -311,7 +311,7 @@ export const getProducts = () => {
 export const getOneProduct = (id) => {
     return new Promise(resolve => {
         setTimeout(() => {
-            const product = products.find(item => item.id == id);
+            const product = products.find(item => item.id === id);
             resolve(product);
         }, 500)
     })
