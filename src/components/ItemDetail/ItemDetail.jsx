@@ -11,12 +11,12 @@ const ItemDetail = ({ id, img, name, stock, author, price }) => {
 
   const [addQuantity, setAddQuantity] = useState(0);
 
-  const {addToCart} = useContext(CartContext);
+  const { addToCart } = useContext(CartContext);
 
   //Funcion manejadora de la cantidad
   const handleQuantity = (quantity) => {
     setAddQuantity(quantity);
-    const item = {id, name, price};
+    const item = { id, name, price };
     addToCart(item, quantity);
   }
 

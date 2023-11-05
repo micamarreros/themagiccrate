@@ -8,7 +8,7 @@ export const CartItem = (item, quantity) => {
     return (
         <div>
             <h4> {item.name} </h4>
-            <p>Quantiyu: {quantity} </p>
+            <p>Quantity: {quantity} </p>
             <p>Price: {item.price} </p>
             <button onClick={() => deleteProduct(item.id)}> Delete </button>
             <hr />

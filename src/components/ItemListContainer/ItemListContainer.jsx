@@ -6,10 +6,10 @@ import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
   const [products, setProduct] = useState([]);
-  
-  const {idCategory} = useParams();
 
-  useEffect( () => {
+  const { idCategory } = useParams();
+
+  useEffect(() => {
     const functionProducts = idCategory ? getProductsByCategory : getProducts;
 
     functionProducts(idCategory)
@@ -19,7 +19,7 @@ const ItemListContainer = () => {
   return (
     <>
       <h2>Products</h2>
-      <ItemList products = {products} />
+      <ItemList products={products} />
     </>
   )
 }

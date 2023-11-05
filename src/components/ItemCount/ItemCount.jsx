@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-const ItemCount = ({start, stock, functionAdd}) => {
+const ItemCount = ({ start, stock, functionAdd }) => {
 
     const [count, setCount] = useState(start);
 
@@ -17,16 +17,16 @@ const ItemCount = ({start, stock, functionAdd}) => {
         }
     }
 
-  return (
-    <>
-        <div>
-            <button onClick={add}> + </button>
-            <p> {count} </p>
-            <button onClick={substract}> - </button>
-        </div>
-        <button onClick={()=> functionAdd(count)}> Add to cart </button>
-    </>
-  )
+    return (
+        <>
+            <div>
+                <button onClick={add}> + </button>
+                <p> {count} </p>
+                <button onClick={substract}> - </button>
+            </div>
+            <button onClick={() => functionAdd(count)}> Add to cart </button>
+        </>
+    )
 }
 
 export default ItemCount
