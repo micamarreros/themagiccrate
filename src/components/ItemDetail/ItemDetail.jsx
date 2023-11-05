@@ -16,7 +16,6 @@ const ItemDetail = ({ id, img, name, stock, author, price }) => {
   //Funcion manejadora de la cantidad
   const handleQuantity = (quantity) => {
     setAddQuantity(quantity);
-    // console.log("Added products: " + quantity);
     const item = {id, name, price};
     addToCart(item, quantity);
   }
