@@ -1,8 +1,9 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { getOneProduct } from '../../asyncmock';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
+import { db } from '../../services/config';
+import { getDoc, doc } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState(null);
@@ -10,10 +11,16 @@ const ItemDetailContainer = () => {
   const { idItem } = useParams();
 
   useEffect(() => {
-    getOneProduct(idItem)
-      .then(response => setProduct(response))
-  }, [idItem])
+    const newDoc = doc(db, "inventario", idItem);
 
+    getDoc(newDoc)
+      .then(res => {
+        const data = res.data();
+        const newProduct = { id: res.id, ...data };
+        setProduct(newProduct);
+      })
+      .catch(error => console.log(error))
+  }, [idItem])
   return (
     <div>
       <ItemDetail {...product} />

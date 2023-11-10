@@ -2,7 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 
-export const CartItem = (item, quantity) => {
+export const CartItem = ({ item, quantity }) => {
     const { deleteProduct } = useContext(CartContext);
 
     return (
