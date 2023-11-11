@@ -27,6 +27,7 @@ const ItemDetail = ({ id, img, name, stock, author, price }) => {
       <h3 className='product-author'> {author} </h3>
       <h4 className='product-price'> ${price} </h4>
       <h3 className='product-id'> ID: {id} </h3>
+      <h3 className='product-stock'> Stock: {stock} </h3>
       <p className='product-description'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ipsam dolorem praesentium maiores, est vitae natus! Odit, obcaecati! Mollitia amet enim repellat culpa ut sed at temporibus, eum ipsam animi! </p>
 
       {
