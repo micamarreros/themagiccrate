@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState, createContext } from 'react';
 
-// Valor inicial
 export const CartContext = createContext({
     cart: [],
     total: 0,
@@ -9,15 +8,10 @@ export const CartContext = createContext({
 });
 
 export const CartProvider = ({ children }) => {
-    //Estados para carrito, total y cantidad total
     const [cart, setCart] = useState([]);
     const [total, setTotal] = useState(0);
     const [totalQuantity, setTotalQuantity] = useState(0);
 
-    //esto se tiene que borrar
-    console.log(cart);
-
-    //Agregar al carrito
     const addToCart = (item, quantity) => {
         const existingProduct = cart.find(prod => prod.item.id === item.id);
 
@@ -39,7 +33,6 @@ export const CartProvider = ({ children }) => {
         }
     }
 
-    //Eliminar producto
     const deleteProduct = (id) => {
         const deletedProduct = cart.find(prod => prod.item.id === id);
         const updatedCart = cart.filter(prod => prod.item.id !== id);
@@ -49,7 +42,6 @@ export const CartProvider = ({ children }) => {
         setTotal(prev => prev - (deletedProduct.item.precio * deletedProduct.quantity));
     }
 
-    //Vaciar carrito
     const emptyCart = () => {
         setCart([]);
         setTotalQuantity(0);

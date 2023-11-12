@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { db } from "../../services/config";
 import { collection, addDoc, updateDoc, doc, getDoc } from 'firebase/firestore';
 import { CartContext } from '../../context/CartContext';
@@ -15,23 +14,18 @@ const Checkout = () => {
 
   const { cart, emptyCart, total, totalQuantity } = useContext(CartContext);
 
-  //Funciones y validaciones
   const formHandler = (event) => {
     event.preventDefault();
 
-    //Validacion para completar todos los campos
     if (!name || !surname || !phone || !email || !emailConfirm) {
       setError("Please enter all the information above to continue!");
       return;
     }
 
-    //Validacion para que coincidan los emails
     if (email !== emailConfirm) {
       setError("Please enter your email address again. The email and confirmation email do not match")
       return;
     }
-
-    // Objeto con datos de orden de compra
 
     const order = {
       items: cart.map(product => ({
@@ -47,9 +41,7 @@ const Checkout = () => {
       email
     };
 
-    // Modificar codigo para que ejecute promesas para actualizar stock y que genere una orden de compra
-
-    Promise.all(
+      Promise.all(
       order.items.map(async (productOrder) => {
         const productRef = doc(db, "inventario", productOrder.id);
 
@@ -75,7 +67,7 @@ const Checkout = () => {
       .catch((error) => {
         console.log("Can't update stock", error);
         setError("Can't update stock, try again");
-      })
+        })
 
   }
 

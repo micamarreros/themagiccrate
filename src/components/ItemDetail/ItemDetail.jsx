@@ -6,14 +6,10 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 
 const ItemDetail = ({ id, img, name, stock, author, price }) => {
-
-  //Estado local con cantidad de productos agregados
-
   const [addQuantity, setAddQuantity] = useState(0);
 
   const { addToCart } = useContext(CartContext);
 
-  //Funcion manejadora de la cantidad
   const handleQuantity = (quantity) => {
     setAddQuantity(quantity);
     const item = { id, name, price };
