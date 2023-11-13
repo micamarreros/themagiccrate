@@ -18,8 +18,8 @@ function App() {
         <CartProvider>
           <NavBar />
           <Routes>
-            <Route path='/' element={<IntroHome home="A whole new reading experience." />} />
-            <Route path='/products' element={<ItemListContainer />} />
+            <Route path='/about' element={<IntroHome home="A whole new reading experience." />} />
+            <Route path='/' element={<ItemListContainer />} />
             <Route path='/category/:idCategory' element={<ItemListContainer />} />
             <Route path='/item/:idItem' element={<ItemDetailContainer />} />
             <Route path='/cart' element={<ShopCart />} />

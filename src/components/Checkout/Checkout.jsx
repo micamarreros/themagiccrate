@@ -41,7 +41,7 @@ const Checkout = () => {
       email
     };
 
-      Promise.all(
+    Promise.all(
       order.items.map(async (productOrder) => {
         const productRef = doc(db, "inventario", productOrder.id);
 
@@ -67,7 +67,7 @@ const Checkout = () => {
       .catch((error) => {
         console.log("Can't update stock", error);
         setError("Can't update stock, try again");
-        })
+      })
 
   }
 
