@@ -23,8 +23,8 @@ const ShopCart = () => {
             {
                 cart.map(product => <CartItem key={product.item.id} {...product} />)
             }
-            <h3>Total: ${total} </h3>
-            <h3>Total Quantity: {totalQuantity} </h3>
+            <h3 className='total-cart'>Total: ${total} </h3>
+            <h3 className='total-quantity-cart'>Total Quantity: {totalQuantity} </h3>
             <button onClick={() => emptyCart()} > Empty Cart </button>
             <hr/>
             <Link className='finish-purchase' to="/checkout">Finish Purchase</Link>

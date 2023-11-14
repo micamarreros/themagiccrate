@@ -52,3 +52,11 @@
     border-radius: 5px; 
     cursor: pointer;
 }
+
+.total-cart {
+    font-size: 18pt;
+}
+
+.total-quantity-cart {
+    font-size: 16pt;
+}
