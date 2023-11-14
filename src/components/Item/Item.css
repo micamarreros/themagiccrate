@@ -39,3 +39,10 @@
     border-radius: 5px; 
     cursor: pointer;
 }
+
+.view-details {
+    font-size: 12pt;
+    text-decoration: none;
+    color: #655D8A;
+    font-weight: 600;;
+}

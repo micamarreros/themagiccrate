@@ -1,0 +1,54 @@
+.checkout-container {
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkout-container h2 {
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-name-checkout {
+    color: #655D8A;
+    font-size: 14pt;
+}
+
+.product-checkout {
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    font-size: 12pt;
+}
+
+.form {
+    padding: 20px;
+}
+
+.label label{
+    padding: 15px;
+    align-items: left;
+    justify-content: left;
+    width: 160px;
+    font-size: 12pt;
+}
+
+.label input{
+    padding: 15px;
+    align-items: left;
+    justify-content: left;
+    width: 220px;
+    font-size: 12pt;
+}
+
+.submit-button {
+    padding: 20px;
+    background-color: #655D8A;
+    color: #fff;
+    font-size: 12pt;
+    border-style: none;
+    border-radius: 5px; 
+    cursor: pointer;
+}

@@ -1,4 +1,8 @@
 .products-container {
-    padding: 1 rem;
+    padding: 1rem 0 1rem 0;
     justify-content: center;
+}
+
+.products-container h2 {
+    font-size: 20pt;
 }

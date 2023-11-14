@@ -15,9 +15,14 @@ header {
 .navbar-item {
     display: inline-block;
     margin: auto;
-    text-decoration: none;
-    font-weight: 400;
     color: #655D8A;
     cursor: pointer;
     padding: 20px;
+}
+
+.navbar-item a{
+    font-size: 1.2vw;
+    text-decoration: none;
+    color: #655D8A;
+    font-weight: 400;
 }

@@ -1,3 +1,11 @@
 .imgCart {
     width: 30px;
 }
+
+.cart-count {
+    font-size: 12pt;
+    text-decoration: none;
+    color: #655D8A;
+    font-weight: 600;
+    padding: 2px;
+}

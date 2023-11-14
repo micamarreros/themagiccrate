@@ -28,6 +28,10 @@ const ItemDetail = ({ id, img, name, stock, author, price, description }) => {
       {
         addQuantity > 0 ? (<Link to="/cart">Finish Purchase</Link>) : (<ItemCount start={1} stock={stock} functionAdd={handleQuantity} />)
       }
+
+      <hr/>
+      <Link to="/">Continue Shopping</Link>
+
     </div>
   )
 }

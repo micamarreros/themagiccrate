@@ -1,7 +1,7 @@
 .itemContainer {
     text-align: center;    
     border-radius: 10px;
-    border: 2px solid #655D8A;
+    border: 3px solid #655D8A;
     width: 40vw;
     padding: 2rem;
     margin: auto;
@@ -15,4 +15,13 @@
 
 .product-description {
     text-align: justify;
+}
+
+.product-button {
+    background-color: #655D8A;
+    color: #fff;
+    padding: 10px;
+    border-style: none;
+    border-radius: 5px; 
+    cursor: pointer;
 }

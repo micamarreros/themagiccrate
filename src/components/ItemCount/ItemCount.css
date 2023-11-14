@@ -1,0 +1,48 @@
+.counter {
+    display: flex;
+    padding: 5px ;
+    height: 70px;
+    background-color: #655D8A;
+    color: #fff;
+    border-radius: 5px; 
+    justify-content: center;
+    align-items: center;
+}
+
+.add, .substract {
+    background-color: #655D8A;
+    color: #fff;
+    padding: 10px;
+    border-style: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    font-size: 14pt;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter button {
+    background-color: #655D8A;
+    color: #fff;
+    padding: 10px;
+    border-style: none;
+    border-radius: 5px; 
+    font-size: 14pt;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-add {
+    padding: 10px;
+}
+
+.button-add button {
+    background-color: #655D8A;
+    color: #fff;
+    padding: 10px ;
+    border-style: none;
+    border-radius: 5px; 
+    font-size: 16pt;
+    justify-content: center;
+    align-items: center;
+}

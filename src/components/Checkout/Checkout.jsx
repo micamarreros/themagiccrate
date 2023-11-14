@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import { db } from "../../services/config";
 import { collection, addDoc, updateDoc, doc, getDoc } from 'firebase/firestore';
 import { CartContext } from '../../context/CartContext';
+import "./Checkout.css";
 
 const Checkout = () => {
   const [name, setName] = useState("");
@@ -72,41 +73,43 @@ const Checkout = () => {
   }
 
   return (
-    <div>
+    <div className='checkout-container'>
       <h2> Checkout </h2>
-
-      <form onSubmit={formHandler}>
-        {
+      <div className='product-checkout'>
+      {
           cart.map(product => (
             <div key={product.item.id}>
-              <p> {product.item.name} x {product.quantity} </p>
+              <p className='product-name-checkout'> {product.item.name} x {product.quantity} </p>
               <p> {product.item.price} </p>
               <hr />
             </div>
           ))
         }
+      </div>
 
-        <div>
+      <form className='form' onSubmit={formHandler}>
+        
+        <div className='label'>
           <label htmlFor=""> Name </label>
           <input type="text" onChange={(e) => setName(e.target.value)} />
         </div>
 
-        <div>
+        <div className='label'>
           <label htmlFor=""> Surname </label>
           <input type="text" onChange={(e) => setSurname(e.target.value)} />
         </div>
 
-        <div>
+        <div className='label'>
           <label htmlFor=""> Phone </label>
           <input type="text" onChange={(e) => setPhone(e.target.value)} />
         </div>
 
-        <div>
+        <div className='label'>
           <label htmlFor=""> Email </label>
           <input type="email" onChange={(e) => setEmail(e.target.value)} />
         </div>
 
-        <div>
+        <div className='label'>
           <label htmlFor=""> Confirm Email </label>
           <input type="email" onChange={(e) => setEmailConfirm(e.target.value)} />
         </div>
@@ -115,7 +118,7 @@ const Checkout = () => {
           error && <p style={({ color: "red" })}> {error} </p>
         }
 
-        <button type="submit"> Confirm Purchase </button>
+        <button className='submit-button' type="submit"> Confirm Purchase </button>
 
         {
           orderId && (
